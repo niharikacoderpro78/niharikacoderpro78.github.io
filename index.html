@@ -4,7 +4,7 @@
     <title>Niharika | Data Analyst Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         *{
@@ -16,13 +16,38 @@
 
         body{
             font-family:'Poppins',sans-serif;
-            background:linear-gradient(135deg,#0f172a,#1e293b);
+            background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
             color:white;
+        }
+
+        /* NAVBAR */
+        nav{
+            position:fixed;
+            width:100%;
+            top:0;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            backdrop-filter:blur(10px);
+            background:rgba(15,23,42,0.6);
+            z-index:1000;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-weight:500;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
         }
 
         header{
             text-align:center;
-            padding:80px 20px;
+            padding:140px 20px 80px 20px;
         }
 
         .profile-img{
@@ -32,45 +57,43 @@
             object-fit:cover;
             border:4px solid #38bdf8;
             margin-bottom:20px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.5);
         }
 
         h1{
-            font-size:42px;
+            font-size:40px;
         }
 
-        .subtitle{
-            opacity:0.8;
-            margin-bottom:25px;
+        .typing{
+            color:#38bdf8;
+            font-weight:600;
+            margin-top:10px;
         }
 
         .btn{
             display:inline-block;
             padding:12px 25px;
+            margin:15px 10px;
             background:#38bdf8;
             color:black;
             border-radius:30px;
             text-decoration:none;
             font-weight:600;
-            margin:10px 5px;
             transition:0.3s;
         }
 
         .btn:hover{
+            transform:translateY(-5px);
             background:white;
-            transform:translateY(-4px);
         }
 
         .icon-btn{
-            display:inline-block;
             padding:10px 18px;
-            margin:5px;
             border-radius:25px;
-            background:#1e293b;
             border:1px solid #38bdf8;
             color:#38bdf8;
             text-decoration:none;
-            transition:0.3s;
+            margin:5px;
+            display:inline-block;
         }
 
         .icon-btn:hover{
@@ -84,58 +107,86 @@
             padding:40px 20px;
         }
 
-        .card{
-            background:#1e293b;
-            padding:35px;
-            margin-bottom:50px;
+        .glass{
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(15px);
             border-radius:20px;
-            box-shadow:0 15px 40px rgba(0,0,0,0.5);
-            transition:0.4s;
-        }
-
-        .card:hover{
-            transform:translateY(-10px);
+            padding:30px;
+            margin-bottom:50px;
+            box-shadow:0 10px 40px rgba(0,0,0,0.5);
         }
 
         h2{
-            border-bottom:2px solid #38bdf8;
-            display:inline-block;
-            padding-bottom:5px;
             margin-bottom:20px;
-        }
-
-        h3{
             color:#38bdf8;
-            margin-top:20px;
         }
 
-        ul{
-            padding-left:20px;
+        .skills{
+            margin-bottom:15px;
+        }
+
+        .skill-bar{
+            background:#1e293b;
+            border-radius:20px;
+            overflow:hidden;
+        }
+
+        .skill-fill{
+            height:10px;
+            background:#38bdf8;
         }
 
         img.dashboard{
             width:100%;
             border-radius:15px;
             margin-top:20px;
+            cursor:pointer;
+        }
+
+        /* Modal */
+        .modal{
+            display:none;
+            position:fixed;
+            z-index:2000;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.8);
+        }
+
+        .modal-content{
+            display:block;
+            margin:5% auto;
+            width:80%;
+            max-width:800px;
         }
 
         footer{
             text-align:center;
             padding:30px;
             background:#0f172a;
-            opacity:0.7;
+            margin-top:40px;
         }
     </style>
 </head>
 
 <body>
 
+<nav>
+    <div><strong>Niharika</strong></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="Data Analyst CV Niharika (1).pdf" download>Resume</a>
+    </div>
+</nav>
+
 <header>
     <img src="IMG_20240906_000214_025.jpg" class="profile-img">
     <h1>Niharika</h1>
-    <p class="subtitle">Data Analyst | SQL | Power BI | Python</p>
-
-    <a href="Data Analyst CV Niharika (1).pdf" class="btn" download>Download Resume</a>
+    <div class="typing" id="typing"></div>
 
     <div>
         <a href="mailto:niharikarao.pro@gmail.com" class="icon-btn">📧 Email</a>
@@ -145,65 +196,89 @@
 
 <div class="container">
 
-    <!-- ABOUT -->
-    <div class="card">
+    <div class="glass" id="about">
         <h2>About Me</h2>
         <p>
-            I am a results-driven Data Analyst specializing in transforming raw data into meaningful business insights.
-            With hands-on experience in SQL, Power BI, and Python, I design interactive dashboards and perform advanced
-            data analysis to support strategic decision-making and improve operational performance.
+            Results-driven Data Analyst skilled in SQL, Power BI, and Python.
+            Experienced in building interactive dashboards and delivering
+            data-driven insights to optimize business performance.
         </p>
     </div>
 
-    <!-- BLINKIT PROJECT -->
-    <div class="card">
-        <h2>Blinkit Sales & Inventory Analysis</h2>
+    <div class="glass" id="skills">
+        <h2>Skills</h2>
 
-        <p>
-            This Power BI dashboard analyzes Blinkit's sales performance, outlet efficiency, and product demand patterns.
-            The project focuses on revenue distribution, outlet tier performance, item visibility impact, and key KPIs
-            to support data-driven retail decisions.
-        </p>
+        <div class="skills">
+            SQL
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
 
-        <h3>Key Insights</h3>
-        <ul>
-            <li>Analyzed total revenue, average sales & item distribution</li>
-            <li>Compared outlet size & tier performance</li>
-            <li>Identified high-performing product categories</li>
-            <li>Created DAX measures for KPI tracking</li>
-        </ul>
+        <div class="skills">
+            Power BI
+            <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+        </div>
 
-        <img src="BLINKIT SALES DASHBOARD 2.png" class="dashboard">
+        <div class="skills">
+            Python
+            <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
     </div>
 
-    <!-- MOBILE VERSE PROJECT -->
-    <div class="card">
-        <h2>Mobile Verse Analytics Dashboard</h2>
-
-        <p>
-            Mobile Verse Analytics is a comprehensive dashboard built to analyze mobile brand sales,
-            transaction volume, customer ratings, and payment trends. The dashboard provides insights
-            into city-wise sales distribution, monthly performance patterns, and brand-level comparisons
-            to support retail strategy optimization.
-        </p>
-
-        <h3>Key Insights</h3>
-        <ul>
-            <li>769M+ total sales performance analysis</li>
-            <li>City-wise sales mapping visualization</li>
-            <li>Customer rating & transaction trend evaluation</li>
-            <li>Payment method breakdown (UPI, Credit, Debit, Cash)</li>
-            <li>Brand performance comparison</li>
-        </ul>
-
-        <img src="Screenshot 2026-02-28 184736.png" class="dashboard">
+    <div class="glass" id="projects">
+        <h2>Blinkit Sales Dashboard</h2>
+        <p>Comprehensive sales and outlet performance dashboard using Power BI.</p>
+        <img src="BLINKIT SALES DASHBOARD 2.png" class="dashboard" onclick="openModal(this.src)">
     </div>
 
+    <div class="glass">
+        <h2>Mobile Verse Analytics</h2>
+        <p>Mobile sales analytics dashboard with city-level and brand-level performance insights.</p>
+        <img src="Screenshot 2026-02-28 184736.png" class="dashboard" onclick="openModal(this.src)">
+    </div>
+
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <img class="modal-content" id="modalImg">
 </div>
 
 <footer>
     © 2026 Niharika | Data Analyst Portfolio
 </footer>
+
+<script>
+    const text = ["Data Analyst", "Power BI Developer", "SQL Specialist", "Python Enthusiast"];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+
+    (function type(){
+        if(count === text.length){
+            count = 0;
+        }
+        currentText = text[count];
+        letter = currentText.slice(0, ++index);
+
+        document.getElementById("typing").textContent = letter;
+        if(letter.length === currentText.length){
+            count++;
+            index = 0;
+            setTimeout(type,1000);
+        }else{
+            setTimeout(type,100);
+        }
+    })();
+
+    function openModal(src){
+        document.getElementById("imageModal").style.display="block";
+        document.getElementById("modalImg").src=src;
+    }
+
+    function closeModal(){
+        document.getElementById("imageModal").style.display="none";
+    }
+</script>
 
 </body>
 </html>
