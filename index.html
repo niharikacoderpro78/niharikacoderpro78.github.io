@@ -178,11 +178,27 @@ header{
     margin-bottom:15px;
 }
 
+/* ===== DASHBOARD IMPROVED RESPONSIVE DESIGN ===== */
 .dashboard{
-    width:75%;
+    width:85%;
+    max-width:900px;
     border-radius:14px;
-    margin:20px auto 0;
+    margin:25px auto 0;
     display:block;
+    box-shadow:0 20px 50px rgba(0,0,0,0.6);
+    transition:0.4s ease;
+}
+
+.dashboard:hover{
+    transform:scale(1.02);
+}
+
+/* Mobile Fix */
+@media (max-width:768px){
+    .dashboard{
+        width:100%;
+        margin-top:20px;
+    }
 }
 
 /* ===== Girl Popup ===== */
@@ -211,16 +227,6 @@ header{
 
 .girl-emoji{
     font-size:22px;
-    animation:waveEmoji 2s infinite;
-}
-
-@keyframes waveEmoji{
-    0%{transform:rotate(0);}
-    20%{transform:rotate(20deg);}
-    40%{transform:rotate(-10deg);}
-    60%{transform:rotate(20deg);}
-    80%{transform:rotate(-5deg);}
-    100%{transform:rotate(0);}
 }
 
 footer{
@@ -261,10 +267,8 @@ document.body.appendChild(s);
 
 <header>
 <img src="IMG_20240906_000214_025.jpg" class="profile-img">
-
 <div class="main-name">Niharika Rao</div>
 <div class="sub-title">Data Analyst</div>
-
 <div class="typing" id="typing"></div>
 
 <div class="btn-group">
