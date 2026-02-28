@@ -1,71 +1,187 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Niharika | Data Analyst</title>
+    <title>Niharika | Data Analyst Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f6f9;
-        }
-        header {
-            background-color: #111827;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
-            padding: 40px;
+            line-height: 1.6;
+        }
+
+        header {
             text-align: center;
+            padding: 80px 20px;
         }
-        section {
-            padding: 40px;
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
         }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
         .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+            background: #1e293b;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transition: 0.3s;
         }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
         h2 {
-            color: #111827;
+            border-bottom: 2px solid #38bdf8;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
         }
+
+        h3 {
+            margin-top: 20px;
+            color: #38bdf8;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background: #38bdf8;
+            color: black;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #111827;
-            color: white;
+            padding: 30px;
+            margin-top: 40px;
+            background: #0f172a;
+            font-size: 14px;
+            opacity: 0.7;
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>Niharika</h1>
     <p>Data Analyst | SQL | Power BI | Python</p>
+    <a href="#" class="btn">Download Resume</a>
 </header>
 
-<section>
+<div class="container">
+
+    <!-- INTRODUCTION -->
     <div class="card">
         <h2>About Me</h2>
-        <p>I am a Data Analyst specializing in dashboard creation, business insights, and data-driven decision making using SQL, Power BI, and Python.</p>
+        <p>
+            I am a results-driven Data Analyst specializing in transforming raw data into 
+            actionable business insights. With strong expertise in SQL, Power BI, and Python, 
+            I design interactive dashboards and perform in-depth data analysis to support 
+            strategic decision-making.
+        </p>
+        <p>
+            My focus is on identifying trends, improving operational efficiency, and delivering 
+            data-driven solutions that create measurable business impact.
+        </p>
     </div>
 
+    <!-- PROJECT SECTION -->
     <div class="card">
-        <h2>Projects</h2>
+        <h2>Project: Blinkit Sales & Inventory Performance Analysis</h2>
+
+        <h3>Project Overview</h3>
+        <p>
+            This project analyzes Blinkit’s sales and inventory performance using Power BI. 
+            The objective was to evaluate revenue trends, outlet performance, product demand, 
+            and operational metrics to support data-driven business decisions.
+        </p>
+
+        <h3>Business Objective</h3>
+        <p>
+            To identify top-performing products, evaluate outlet-level sales efficiency, 
+            understand purchasing patterns, and highlight areas for operational improvement.
+        </p>
+
+        <h3>Key Analysis Performed</h3>
         <ul>
-            <li><strong>Blinkit Sales Analysis</strong> – Sales & Inventory Dashboard</li>
-            <li><strong>Vendor Performance Analysis</strong> – KPI & Supplier Evaluation</li>
+            <li>Analyzed total sales, average sales, and product distribution</li>
+            <li>Evaluated outlet performance based on size, type, and location tier</li>
+            <li>Identified high-demand product categories</li>
+            <li>Compared revenue performance across different outlet segments</li>
+            <li>Built interactive KPI dashboards using DAX measures</li>
         </ul>
+
+        <h3>Tools & Technologies</h3>
+        <ul>
+            <li>Power BI (Dashboard & Visualization)</li>
+            <li>DAX (Calculated Measures & KPIs)</li>
+            <li>Data Cleaning & Transformation</li>
+            <li>Excel / CSV Data Sources</li>
+        </ul>
+
+        <h3>Business Impact</h3>
+        <p>
+            The dashboard provides comprehensive visibility into revenue trends and operational 
+            performance, enabling stakeholders to identify profitable segments and areas requiring 
+            strategic improvement. This analysis supports informed and data-backed business decisions.
+        </p>
     </div>
 
+    <!-- CONTACT -->
     <div class="card">
         <h2>Contact</h2>
         <p>Email: niharikarao.pro@gmail.com</p>
-        <p>LinkedIn: www.linkedin.com/in/niharika03</p>
+        <p>
+            LinkedIn: 
+            <a href="https://www.linkedin.com/in/niharika03" target="_blank">
+                www.linkedin.com/in/niharika03
+            </a>
+        </p>
     </div>
-</section>
+
+</div>
 
 <footer>
-    © 2026 Niharika | Portfolio Website
+    © 2026 Niharika | Data Analyst Portfolio
 </footer>
 
 </body>
