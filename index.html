@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Niharika | Data Analyst</title>
+<title>Niharika Rao | Data Analyst</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -38,7 +38,7 @@ body{
     100%{background-position:0% 50%;}
 }
 
-/* ===== Floating Coding Numbers ===== */
+/* ===== Floating Coding Symbols ===== */
 .code{
     position:absolute;
     color:rgba(56,189,248,0.15);
@@ -51,7 +51,7 @@ body{
     100%{transform:translateY(-10vh);}
 }
 
-/* ===== Background Glass Cards ===== */
+/* ===== Background Floating Cards ===== */
 .bg-card{
     position:absolute;
     width:220px;
@@ -95,7 +95,7 @@ nav a:hover{
 /* ===== Header ===== */
 header{
     text-align:center;
-    padding:170px 20px 90px;
+    padding:180px 20px 90px;
 }
 
 .profile-img{
@@ -106,27 +106,26 @@ header{
     object-fit:cover;
 }
 
-.wave{
-    display:inline-block;
-    animation:wave 2s infinite;
+.main-name{
+    font-size:40px;
+    font-weight:700;
+    margin-top:15px;
 }
 
-@keyframes wave{
-    0%{transform:rotate(0);}
-    25%{transform:rotate(20deg);}
-    50%{transform:rotate(-10deg);}
-    75%{transform:rotate(20deg);}
-    100%{transform:rotate(0);}
+.sub-title{
+    font-size:20px;
+    color:#38bdf8;
+    margin-top:5px;
+    font-weight:600;
 }
 
 .typing{
-    color:#38bdf8;
     margin-top:10px;
-    font-weight:600;
+    font-weight:500;
     font-size:18px;
 }
 
-/* ===== App Style Buttons ===== */
+/* ===== Buttons ===== */
 .btn-group{
     margin-top:25px;
 }
@@ -236,13 +235,11 @@ footer{
 
 <div class="bg"></div>
 
-<!-- Floating Background Cards -->
 <div class="bg-card" style="top:20%;left:10%;"></div>
 <div class="bg-card" style="top:60%;left:75%;"></div>
 <div class="bg-card" style="top:40%;left:50%;"></div>
 
 <script>
-/* Floating Coding Symbols */
 const symbols=["0","1","SELECT","DAX","SQL","Python","{ }","< >","Revenue","%"];
 for(let i=0;i<40;i++){
 let s=document.createElement("div");
@@ -255,7 +252,7 @@ document.body.appendChild(s);
 </script>
 
 <nav>
-<div><strong>Niharika</strong></div>
+<div><strong>Niharika Rao</strong></div>
 <div>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
@@ -264,7 +261,10 @@ document.body.appendChild(s);
 
 <header>
 <img src="IMG_20240906_000214_025.jpg" class="profile-img">
-<h1>Hi <span class="wave">👋</span> This is Niharika</h1>
+
+<div class="main-name">Niharika Rao</div>
+<div class="sub-title">Data Analyst</div>
+
 <div class="typing" id="typing"></div>
 
 <div class="btn-group">
@@ -279,14 +279,14 @@ document.body.appendChild(s);
 <div class="card" id="about">
 <h2>About Me</h2>
 <p>
-I am a Data Analyst specializing in SQL, Power BI, and Python. I transform raw datasets into interactive dashboards and KPI-driven insights to support data-backed strategic decisions.
+I am a Data Analyst specializing in SQL, Power BI, and Python. I transform raw datasets into interactive dashboards and KPI-driven insights to support strategic business decisions.
 </p>
 </div>
 
 <div class="card" id="projects">
 <h2>Blinkit Sales & Inventory Dashboard</h2>
 <p>
-This Power BI dashboard evaluates retail sales performance, outlet tier comparison, and product-level revenue analysis. It includes KPI tracking, sales trend identification, and outlet efficiency insights.
+This Power BI dashboard evaluates retail sales performance, outlet comparison, and revenue analysis using KPI-driven metrics and trend insights.
 </p>
 <img src="BLINKIT SALES DASHBOARD 2.png" class="dashboard">
 </div>
@@ -294,7 +294,7 @@ This Power BI dashboard evaluates retail sales performance, outlet tier comparis
 <div class="card">
 <h2>Mobile Verse Analytics Dashboard</h2>
 <p>
-A comprehensive mobile sales analytics dashboard delivering brand-wise revenue comparison, city-level distribution analysis, customer rating trends, and payment behavior insights.
+A comprehensive mobile sales analytics dashboard delivering brand-wise revenue comparison, city-level distribution analysis, and payment trend insights.
 </p>
 <img src="Screenshot 2026-02-28 184736.png" class="dashboard">
 </div>
@@ -307,12 +307,10 @@ A comprehensive mobile sales analytics dashboard delivering brand-wise revenue c
 </div>
 
 <footer>
-© 2026 Niharika | Data Analyst Portfolio
+© 2026 Niharika Rao | Data Analyst Portfolio
 </footer>
 
 <script>
-
-/* Typing Effect */
 const text="Turning Data Into Insights";
 let i=0;
 function typing(){
@@ -323,7 +321,6 @@ setTimeout(typing,80);
 }}
 typing();
 
-/* Scroll Reveal */
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
@@ -333,13 +330,11 @@ entry.target.classList.add("show");
 });
 document.querySelectorAll(".card").forEach(el=>observer.observe(el));
 
-/* Girl Popup */
 window.onload=function(){
 setTimeout(function(){
 document.getElementById("girlPopup").classList.add("show");
 },1500);
 }
-
 </script>
 
 </body>
