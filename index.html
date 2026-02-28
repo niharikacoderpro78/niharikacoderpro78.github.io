@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -22,14 +21,14 @@ body{
     overflow-x:hidden;
 }
 
-/* Animated Gradient Background */
-.bg-gradient{
+/* ===== Animated Gradient Background ===== */
+.bg{
     position:fixed;
     width:100%;
     height:100%;
     background:linear-gradient(-45deg,#0f172a,#1e293b,#0ea5e9,#0f172a);
     background-size:400% 400%;
-    animation:gradientMove 15s ease infinite;
+    animation:gradientMove 18s ease infinite;
     z-index:-3;
 }
 
@@ -39,40 +38,38 @@ body{
     100%{background-position:0% 50%;}
 }
 
-/* Floating Particles */
-.particle{
+/* ===== Floating Coding Numbers ===== */
+.code{
     position:absolute;
-    width:6px;
-    height:6px;
-    background:#38bdf8;
-    border-radius:50%;
-    opacity:0.3;
-    animation:float 20s linear infinite;
+    color:rgba(56,189,248,0.15);
+    font-size:18px;
+    animation:floatUp 20s linear infinite;
 }
 
-@keyframes float{
+@keyframes floatUp{
     0%{transform:translateY(100vh);}
     100%{transform:translateY(-10vh);}
 }
 
-/* Floating Dashboard Cards Background */
+/* ===== Background Glass Cards ===== */
 .bg-card{
     position:absolute;
-    width:200px;
-    height:120px;
+    width:220px;
+    height:140px;
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(10px);
-    border-radius:15px;
+    border-radius:18px;
     animation:cardFloat 12s ease-in-out infinite;
+    z-index:-2;
 }
 
 @keyframes cardFloat{
     0%{transform:translateY(0);}
-    50%{transform:translateY(-40px);}
+    50%{transform:translateY(-35px);}
     100%{transform:translateY(0);}
 }
 
-/* Navbar */
+/* ===== Navbar ===== */
 nav{
     position:fixed;
     width:100%;
@@ -88,26 +85,25 @@ nav a{
     color:white;
     text-decoration:none;
     margin-left:20px;
+    font-weight:500;
 }
 
 nav a:hover{
     color:#38bdf8;
 }
 
-/* Header */
+/* ===== Header ===== */
 header{
     text-align:center;
-    padding:150px 20px 80px 20px;
-    position:relative;
-    z-index:2;
+    padding:170px 20px 90px;
 }
 
 .profile-img{
-    width:160px;
-    height:160px;
+    width:150px;
+    height:150px;
     border-radius:50%;
-    object-fit:cover;
     border:4px solid #38bdf8;
+    object-fit:cover;
 }
 
 .wave{
@@ -116,31 +112,52 @@ header{
 }
 
 @keyframes wave{
-    0%{transform:rotate(0deg);}
-    20%{transform:rotate(20deg);}
-    40%{transform:rotate(-10deg);}
-    60%{transform:rotate(20deg);}
-    80%{transform:rotate(-5deg);}
-    100%{transform:rotate(0deg);}
+    0%{transform:rotate(0);}
+    25%{transform:rotate(20deg);}
+    50%{transform:rotate(-10deg);}
+    75%{transform:rotate(20deg);}
+    100%{transform:rotate(0);}
 }
 
 .typing{
     color:#38bdf8;
-    font-weight:600;
     margin-top:10px;
-    font-size:20px;
+    font-weight:600;
+    font-size:18px;
 }
 
-/* Glass Sections */
+/* ===== App Style Buttons ===== */
+.btn-group{
+    margin-top:25px;
+}
+
+.app-btn{
+    display:inline-block;
+    padding:12px 22px;
+    margin:8px;
+    border-radius:14px;
+    background:#1e293b;
+    border:1px solid #38bdf8;
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.app-btn:hover{
+    background:#38bdf8;
+    color:black;
+    transform:translateY(-4px);
+}
+
+/* ===== Sections ===== */
 .container{
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
     padding:40px 20px;
-    position:relative;
-    z-index:2;
 }
 
-.glass{
+.card{
     background:rgba(255,255,255,0.06);
     backdrop-filter:blur(15px);
     border-radius:20px;
@@ -149,85 +166,144 @@ header{
     box-shadow:0 15px 40px rgba(0,0,0,0.5);
     transform:translateY(50px);
     opacity:0;
-    transition:all 0.8s ease;
+    transition:0.8s ease;
 }
 
-.glass.show{
+.card.show{
     transform:translateY(0);
     opacity:1;
 }
 
+.card h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
 .dashboard{
-    width:100%;
-    border-radius:15px;
-    margin-top:20px;
+    width:75%;
+    border-radius:14px;
+    margin:20px auto 0;
+    display:block;
+}
+
+/* ===== Girl Popup ===== */
+.girl-popup{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    background:rgba(56,189,248,0.95);
+    color:black;
+    padding:14px 22px;
+    border-radius:40px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    opacity:0;
+    transform:translateY(120px) scale(0.8);
+    transition:0.6s ease;
+}
+
+.girl-popup.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+
+.girl-emoji{
+    font-size:22px;
+    animation:waveEmoji 2s infinite;
+}
+
+@keyframes waveEmoji{
+    0%{transform:rotate(0);}
+    20%{transform:rotate(20deg);}
+    40%{transform:rotate(-10deg);}
+    60%{transform:rotate(20deg);}
+    80%{transform:rotate(-5deg);}
+    100%{transform:rotate(0);}
 }
 
 footer{
     text-align:center;
     padding:30px;
     background:#0f172a;
-    position:relative;
-    z-index:2;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="bg-gradient"></div>
+<div class="bg"></div>
 
 <!-- Floating Background Cards -->
 <div class="bg-card" style="top:20%;left:10%;"></div>
 <div class="bg-card" style="top:60%;left:75%;"></div>
 <div class="bg-card" style="top:40%;left:50%;"></div>
 
-<!-- Particles -->
 <script>
+/* Floating Coding Symbols */
+const symbols=["0","1","SELECT","DAX","SQL","Python","{ }","< >","Revenue","%"];
 for(let i=0;i<40;i++){
-    let p=document.createElement("div");
-    p.className="particle";
-    p.style.left=Math.random()*100+"%";
-    p.style.animationDuration=(15+Math.random()*10)+"s";
-    document.body.appendChild(p);
+let s=document.createElement("div");
+s.className="code";
+s.innerHTML=symbols[Math.floor(Math.random()*symbols.length)];
+s.style.left=Math.random()*100+"%";
+s.style.animationDuration=(15+Math.random()*10)+"s";
+document.body.appendChild(s);
 }
 </script>
 
 <nav>
-    <div><strong>Niharika</strong></div>
-    <div>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="Data Analyst CV Niharika (1).pdf" download>Resume</a>
-    </div>
+<div><strong>Niharika</strong></div>
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+</div>
 </nav>
 
 <header>
-    <img src="IMG_20240906_000214_025.jpg" class="profile-img">
-    <h1>Hi <span class="wave">👋</span> This is Niharika</h1>
-    <div class="typing" id="typing"></div>
+<img src="IMG_20240906_000214_025.jpg" class="profile-img">
+<h1>Hi <span class="wave">👋</span> This is Niharika</h1>
+<div class="typing" id="typing"></div>
+
+<div class="btn-group">
+<a href="https://www.linkedin.com/in/niharika03" target="_blank" class="app-btn">LinkedIn</a>
+<a href="mailto:niharikarao.pro@gmail.com" class="app-btn">Gmail</a>
+<a href="Data Analyst CV Niharika (1).pdf" download class="app-btn">Resume</a>
+</div>
 </header>
 
 <div class="container">
 
-<div class="glass" id="about">
+<div class="card" id="about">
 <h2>About Me</h2>
 <p>
-Data Analyst skilled in SQL, Power BI & Python, transforming raw data into strategic insights and interactive dashboards.
+I am a Data Analyst specializing in SQL, Power BI, and Python. I transform raw datasets into interactive dashboards and KPI-driven insights to support data-backed strategic decisions.
 </p>
 </div>
 
-<div class="glass" id="projects">
-<h2>Blinkit Sales Dashboard</h2>
+<div class="card" id="projects">
+<h2>Blinkit Sales & Inventory Dashboard</h2>
+<p>
+This Power BI dashboard evaluates retail sales performance, outlet tier comparison, and product-level revenue analysis. It includes KPI tracking, sales trend identification, and outlet efficiency insights.
+</p>
 <img src="BLINKIT SALES DASHBOARD 2.png" class="dashboard">
 </div>
 
-<div class="glass">
-<h2>Mobile Verse Analytics</h2>
+<div class="card">
+<h2>Mobile Verse Analytics Dashboard</h2>
+<p>
+A comprehensive mobile sales analytics dashboard delivering brand-wise revenue comparison, city-level distribution analysis, customer rating trends, and payment behavior insights.
+</p>
 <img src="Screenshot 2026-02-28 184736.png" class="dashboard">
 </div>
 
+</div>
+
+<div class="girl-popup" id="girlPopup">
+<span class="girl-emoji">👩‍💻</span>
+<span>Hi, this is Niharika 👋</span>
 </div>
 
 <footer>
@@ -236,16 +312,15 @@ Data Analyst skilled in SQL, Power BI & Python, transforming raw data into strat
 
 <script>
 
-/* Typing Animation */
+/* Typing Effect */
 const text="Turning Data Into Insights";
 let i=0;
 function typing(){
-    if(i<text.length){
-        document.getElementById("typing").innerHTML+=text.charAt(i);
-        i++;
-        setTimeout(typing,80);
-    }
-}
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,80);
+}}
 typing();
 
 /* Scroll Reveal */
@@ -256,7 +331,14 @@ entry.target.classList.add("show");
 }
 });
 });
-document.querySelectorAll(".glass").forEach(el=>observer.observe(el));
+document.querySelectorAll(".card").forEach(el=>observer.observe(el));
+
+/* Girl Popup */
+window.onload=function(){
+setTimeout(function(){
+document.getElementById("girlPopup").classList.add("show");
+},1500);
+}
 
 </script>
 
