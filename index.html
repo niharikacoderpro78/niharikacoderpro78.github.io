@@ -1,382 +1,326 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Niharika Rao | Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:#0f172a;
-    color:white;
-    overflow-x:hidden;
+background:#0f172a;
+color:white;
 }
 
-/* ===== Animated Gradient Background ===== */
-.bg{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:linear-gradient(-45deg,#0f172a,#1e293b,#0ea5e9,#0f172a);
-    background-size:400% 400%;
-    animation:gradientMove 18s ease infinite;
-    z-index:-3;
-}
+/* NAVBAR */
 
-@keyframes gradientMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-/* ===== Floating Coding Symbols ===== */
-.code{
-    position:absolute;
-    color:rgba(56,189,248,0.15);
-    font-size:18px;
-    animation:floatUp 20s linear infinite;
-}
-
-@keyframes floatUp{
-    0%{transform:translateY(100vh);}
-    100%{transform:translateY(-10vh);}
-}
-
-/* ===== Background Floating Cards ===== */
-.bg-card{
-    position:absolute;
-    width:220px;
-    height:140px;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
-    border-radius:18px;
-    animation:cardFloat 12s ease-in-out infinite;
-    z-index:-2;
-}
-
-@keyframes cardFloat{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-35px);}
-    100%{transform:translateY(0);}
-}
-
-/* ===== Navbar ===== */
 nav{
-    position:fixed;
-    width:100%;
-    padding:15px 40px;
-    display:flex;
-    justify-content:space-between;
-    backdrop-filter:blur(12px);
-    background:rgba(15,23,42,0.6);
-    z-index:1000;
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:#020617;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav h2{
+color:#38bdf8;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:500;
+color:white;
+text-decoration:none;
+margin-left:20px;
 }
 
-nav a:hover{
-    color:#38bdf8;
+/* HERO */
+
+.hero{
+text-align:center;
+padding:100px 20px;
 }
 
-/* ===== Header ===== */
-header{
-    text-align:center;
-    padding:180px 20px 90px;
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
 }
 
-.profile-img{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    border:4px solid #38bdf8;
-    object-fit:cover;
+.hero p{
+color:#94a3b8;
+margin-bottom:30px;
 }
 
-.main-name{
-    font-size:40px;
-    font-weight:700;
-    margin-top:15px;
+.btn{
+padding:12px 25px;
+background:#38bdf8;
+border:none;
+border-radius:8px;
+margin:5px;
+text-decoration:none;
+color:black;
+font-weight:600;
 }
 
-.sub-title{
-    font-size:20px;
-    color:#38bdf8;
-    margin-top:5px;
-    font-weight:600;
+/* ABOUT */
+
+.section{
+padding:80px 10%;
 }
 
-.typing{
-    margin-top:10px;
-    font-weight:500;
-    font-size:18px;
+.section h2{
+margin-bottom:20px;
+color:#38bdf8;
 }
 
-/* ===== Buttons ===== */
-.btn-group{
-    margin-top:25px;
+.about{
+line-height:1.8;
+color:#cbd5f5;
 }
 
-.app-btn{
-    display:inline-block;
-    padding:12px 22px;
-    margin:8px;
-    border-radius:14px;
-    background:#1e293b;
-    border:1px solid #38bdf8;
-    color:#38bdf8;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
 }
 
-.app-btn:hover{
-    background:#38bdf8;
-    color:black;
-    transform:translateY(-4px);
+.skill{
+background:#1e293b;
+padding:10px 20px;
+border-radius:6px;
 }
 
-/* ===== Sections ===== */
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:30px;
 }
 
 .card{
-    background:rgba(255,255,255,0.06);
-    backdrop-filter:blur(15px);
-    border-radius:20px;
-    padding:30px;
-    margin-bottom:50px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.5);
-    transform:translateY(50px);
-    opacity:0;
-    transition:0.8s ease;
+background:#1e293b;
+border-radius:12px;
+overflow:hidden;
+transition:0.3s;
 }
 
-.card.show{
-    transform:translateY(0);
-    opacity:1;
+.card:hover{
+transform:translateY(-8px);
 }
 
-.card h2{
-    color:#38bdf8;
-    margin-bottom:15px;
+.card img{
+width:100%;
 }
 
-/* ===== DASHBOARD IMPROVED RESPONSIVE DESIGN ===== */
-.dashboard{
-    width:85%;
-    max-width:900px;
-    border-radius:14px;
-    margin:25px auto 0;
-    display:block;
-    box-shadow:0 20px 50px rgba(0,0,0,0.6);
-    transition:0.4s ease;
+.card-content{
+padding:20px;
 }
 
-.dashboard:hover{
-    transform:scale(1.02);
+.card-content h3{
+margin-bottom:10px;
 }
 
-/* Mobile Fix */
-@media (max-width:768px){
-    .dashboard{
-        width:100%;
-        margin-top:20px;
-    }
+.card-content p{
+font-size:14px;
+color:#cbd5f5;
 }
 
-/* ===== Girl Popup ===== */
-.girl-popup{
-    position:fixed;
-    bottom:30px;
-    right:30px;
-    background:rgba(56,189,248,0.95);
-    color:black;
-    padding:14px 22px;
-    border-radius:40px;
-    font-weight:600;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-    opacity:0;
-    transform:translateY(120px) scale(0.8);
-    transition:0.6s ease;
+/* CONTACT */
+
+.contact a{
+color:#38bdf8;
+display:block;
+margin:10px 0;
 }
 
-.girl-popup.show{
-    opacity:1;
-    transform:translateY(0) scale(1);
-}
-
-.girl-emoji{
-    font-size:22px;
-}
+/* FOOTER */
 
 footer{
-    text-align:center;
-    padding:30px;
-    background:#0f172a;
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:50px;
 }
+
 </style>
+
 </head>
 
 <body>
 
-<div class="bg"></div>
-
-<div class="bg-card" style="top:20%;left:10%;"></div>
-<div class="bg-card" style="top:60%;left:75%;"></div>
-<div class="bg-card" style="top:40%;left:50%;"></div>
-
-<script>
-const symbols=["0","1","SELECT","DAX","SQL","Python","{ }","< >","Revenue","%"];
-for(let i=0;i<40;i++){
-let s=document.createElement("div");
-s.className="code";
-s.innerHTML=symbols[Math.floor(Math.random()*symbols.length)];
-s.style.left=Math.random()*100+"%";
-s.style.animationDuration=(15+Math.random()*10)+"s";
-document.body.appendChild(s);
-}
-</script>
-
 <nav>
-<div><strong>Niharika Rao</strong></div>
+
+<h2>Niharika Rao</h2>
+
 <div>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
+
 </nav>
 
-<header>
-<img src="IMG_20240906_000214_025.jpg" class="profile-img">
-<div class="main-name">Niharika Rao</div>
-<div class="sub-title">Data Analyst</div>
-<div class="typing" id="typing"></div>
+<!-- HERO -->
 
-<div class="btn-group">
-<a href="https://www.linkedin.com/in/niharika03" target="_blank" class="app-btn">LinkedIn</a>
-<a href="mailto:niharikarao.pro@gmail.com" class="app-btn">Gmail</a>
-<a href="Data Analyst CV Niharika (1).pdf" download class="app-btn">Resume</a>
-</div>
-</header>
+<section class="hero">
 
-<div class="container">
+<h1>Niharika Rao</h1>
+<p>Data Analyst | SQL | Power BI | Python</p>
 
-<div class="card" id="about">
+<a class="btn" href="Data Analyst CV Niharika (1).pdf">Download Resume</a>
+
+<a class="btn" href="https://www.linkedin.com/in/niharika03">LinkedIn</a>
+
+<a class="btn" href="mailto:niharikarao.pro@gmail.com">Email</a>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
 <h2>About Me</h2>
-<p>
-I am a Data Analyst specializing in SQL, Power BI, and Python. I transform raw datasets into interactive dashboards and KPI-driven insights to support strategic business decisions.
+
+<p class="about">
+
+I am a passionate Data Analyst focused on transforming raw data into meaningful business insights.  
+I specialize in SQL, Power BI, Excel, and Python to analyze datasets and build interactive dashboards.
+
+My work focuses on identifying patterns, improving business decisions, and presenting data in a clear visual format.
+
 </p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="section">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">SQL</div>
+<div class="skill">Power BI</div>
+<div class="skill">Excel</div>
+<div class="skill">Python</div>
+<div class="skill">Data Visualization</div>
+<div class="skill">Pandas</div>
+
 </div>
 
-<div class="card" id="projects">
-<h2>Blinkit Sales & Inventory Dashboard</h2>
-<p>
-This Power BI dashboard evaluates retail sales performance, outlet comparison, and revenue analysis using KPI-driven metrics and trend insights.
-</p>
-<img src="BLINKIT SALES DASHBOARD 2.png" class="dashboard">
-</div>
+</section>
+
+<!-- PROJECTS -->
+
+<section class="section" id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<!-- PROJECT 1 -->
 
 <div class="card">
-<h2>Mobile Verse Analytics Dashboard</h2>
+
+<img src="BLINKIT SALES DASHBOARD 2.png">
+
+<div class="card-content">
+
+<h3>Blinkit Sales Analysis</h3>
+
 <p>
-A comprehensive mobile sales analytics dashboard delivering brand-wise revenue comparison, city-level distribution analysis, and payment trend insights.
+
+Analyzed retail sales performance using Power BI.  
+The dashboard highlights total sales, outlet performance, product categories, and location insights.
+
+Tools: Power BI, Excel
+
 </p>
-<img src="Screenshot 2026-02-28 184736.png" class="dashboard">
+
+</div>
+
+</div>
+
+<!-- PROJECT 2 -->
+
+<div class="card">
+
+<img src="Screenshot 2026-02-28 184736.png">
+
+<div class="card-content">
+
+<h3>Mobile Verse Analytics</h3>
+
+<p>
+
+Developed an analytics dashboard analyzing mobile sales, customer ratings, payment methods, and sales trends across different cities.
+
+Tools: Power BI, Excel
+
+</p>
+
+</div>
+
+</div>
+
+<!-- PROJECT 3 -->
+
+<div class="card">
+
+<img src="chart1_monthly_claim_cost_trend.png">
+
+<div class="card-content">
+
+<h3>Insurance Policy Sales & Claims Analysis</h3>
+
+<p>
+
+Analyzed insurance policy sales and claims using PostgreSQL and Python.  
+SQL queries calculated premium revenue while Python visualizations identified claim cost trends and risk exposure.
+
+Tools: PostgreSQL, SQL, Python, Pandas, Matplotlib
+
+</p>
+
+</div>
+
 </div>
 
 </div>
 
-<div class="girl-popup" id="girlPopup">
-<span class="girl-emoji">👩‍💻</span>
-<span>Hi, this is Niharika 👋</span>
-</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+<h2>Contact</h2>
+
+<a href="mailto:niharikarao.pro@gmail.com">niharikarao.pro@gmail.com</a>
+
+<a href="https://www.linkedin.com/in/niharika03">LinkedIn Profile</a>
+
+</section>
 
 <footer>
+
 © 2026 Niharika Rao | Data Analyst Portfolio
+
 </footer>
-
-<script>
-const text="Turning Data Into Insights";
-let i=0;
-function typing(){
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(typing,80);
-}}
-typing();
-
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-document.querySelectorAll(".card").forEach(el=>observer.observe(el));
-
-window.onload=function(){
-setTimeout(function(){
-document.getElementById("girlPopup").classList.add("show");
-},1500);
-}
-</script>
 
 </body>
 </html>
-
-<div class="project">
-
-<h2>Insurance Policy Sales & Claims Analysis</h2>
-
-<p>
-This project analyzes simulated insurance policy sales and claims data using 
-PostgreSQL and Python. SQL queries were used to calculate premium revenue, 
-future liabilities, and earned premiums. Python (Pandas + Matplotlib) was used 
-to visualize claim trends and insurer risk exposure.
-</p>
-
-<p><b>Tools Used:</b> PostgreSQL, SQL, Python, Pandas, Matplotlib</p>
-
-<h3>1. Monthly Claim Cost Trend</h3>
-<img src="chart1_monthly_claim_cost_trend.png" width="600">
-
-<p>
-This line chart shows how claim costs change month-to-month. 
-It helps insurers understand seasonal claim patterns.
-</p>
-
-<h3>2. Premium by Policy Tenure</h3>
-<img src="chart2_premium_by_tenure.png" width="600">
-
-<p>
-This bar chart shows total premium collected across different policy tenures.
-</p>
-
-<h3>3. Loss Ratio by Policy Tenure</h3>
-<img src="chart3_loss_ratio_by_tenure.png" width="600">
-
-<p>
-Loss ratio compares claims paid to premiums collected, indicating insurer risk.
-</p>
-
-</div>
