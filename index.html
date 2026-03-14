@@ -87,7 +87,7 @@ transform:scale(1.05);
 box-shadow:0 0 20px rgba(56,189,248,0.6);
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section{
 padding:80px 10%;
@@ -98,7 +98,22 @@ color:#38bdf8;
 margin-bottom:20px;
 }
 
-/* PROJECT GRID */
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:12px 20px;
+border-radius:8px;
+}
+
+/* PROJECTS */
 
 .projects{
 display:grid;
@@ -150,7 +165,7 @@ background:#020617;
 margin-top:40px;
 }
 
-/* FLOATING CODE BACKGROUND */
+/* FLOATING CODE */
 
 .code span{
 position:fixed;
@@ -165,7 +180,7 @@ animation:float 20s linear infinite;
 100%{transform:translateY(-100vh);}
 }
 
-/* POPUP CASE STUDY */
+/* POPUP */
 
 .popup-case{
 display:none;
@@ -186,7 +201,6 @@ padding:40px;
 width:80%;
 max-width:1000px;
 border-radius:10px;
-animation:popup 0.4s ease;
 }
 
 .popup-content img{
@@ -199,11 +213,6 @@ border-radius:10px;
 float:right;
 font-size:30px;
 cursor:pointer;
-}
-
-@keyframes popup{
-from{transform:scale(0.8);}
-to{transform:scale(1);}
 }
 
 /* POPUP GIRL */
@@ -225,8 +234,6 @@ font-weight:600;
 
 <body>
 
-<!-- FLOATING CODE -->
-
 <div class="code">
 <span style="left:10%">SELECT * FROM DATA</span>
 <span style="left:40%">Python Pandas</span>
@@ -240,13 +247,12 @@ font-weight:600;
 
 <div>
 <a href="#about">About</a>
+<a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </div>
 
 </nav>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -259,26 +265,45 @@ font-weight:600;
 
 </section>
 
-<!-- ABOUT -->
-
 <section class="section" id="about">
 
 <h2>About Me</h2>
 
 <p>
 
-I am a passionate Data Analyst focused on transforming raw data into actionable insights.
-My work involves analyzing datasets using SQL, Python, Excel, and Power BI to uncover
-patterns that support business decision making.
+I am an aspiring Data Analyst passionate about transforming raw data into meaningful insights that support business decision making. My journey into data analytics began with the curiosity of understanding how businesses use data to guide strategy and optimize performance.
 
-I enjoy building dashboards that communicate data clearly and help organizations
-understand trends, customer behavior, and operational performance.
+Through practical projects and continuous learning, I have developed experience working with analytical tools such as SQL, Python, Excel, Power BI, and Tableau. These tools allow me to extract, clean, analyze, and visualize data to uncover patterns that help organizations make better decisions.
+
+My work focuses on identifying key trends within datasets and presenting them through interactive dashboards and reports. By transforming complex data into easy-to-understand visualizations, I help stakeholders quickly understand performance metrics, customer behavior, and operational insights.
+
+I particularly enjoy working with data visualization because it allows businesses to explore insights interactively. Well-designed dashboards can highlight opportunities, reveal inefficiencies, and guide decision-makers toward more informed strategies.
+
+My projects involve analyzing retail sales, mobile phone market trends, and insurance claim patterns. Each project helped strengthen my analytical thinking, problem-solving abilities, and technical skills.
+
+I believe data analysis is not only about numbers but about storytelling. Every dataset contains insights that can drive meaningful business improvements when interpreted correctly. My goal is to continue growing as a data analyst and contribute to organizations by providing actionable insights that improve efficiency, increase profitability, and support strategic decision making.
 
 </p>
 
 </section>
 
-<!-- PROJECTS -->
+<section class="section" id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">SQL</div>
+<div class="skill">Excel</div>
+<div class="skill">Power BI</div>
+<div class="skill">Tableau</div>
+<div class="skill">Data Visualization</div>
+<div class="skill">Pandas</div>
+
+</div>
+
+</section>
 
 <section class="section" id="projects">
 
@@ -309,7 +334,7 @@ understand trends, customer behavior, and operational performance.
 
 <h3>Mobile Verse Analytics</h3>
 
-<p>Dashboard analyzing mobile brand sales, ratings, and payment methods.</p>
+<p>Interactive dashboard analyzing mobile brand sales, ratings, and payment methods.</p>
 
 </div>
 
@@ -324,7 +349,7 @@ understand trends, customer behavior, and operational performance.
 
 <h3>Insurance Sales & Claims Analysis</h3>
 
-<p>SQL and Python analysis identifying claim trends and risk exposure.</p>
+<p>SQL and Python analysis identifying claim trends and insurance risk exposure.</p>
 
 </div>
 
@@ -333,8 +358,6 @@ understand trends, customer behavior, and operational performance.
 </div>
 
 </section>
-
-<!-- CONTACT -->
 
 <section class="section contact" id="contact">
 
@@ -351,8 +374,6 @@ understand trends, customer behavior, and operational performance.
 
 </footer>
 
-<!-- POPUP GIRL -->
-
 <div class="popupGirl">
 👩‍💻 Hi this is Niharika
 </div>
@@ -361,7 +382,6 @@ understand trends, customer behavior, and operational performance.
 
 <div id="blinkitPopup" class="popup-case">
 <div class="popup-content">
-
 <span class="close" onclick="closePopup()">&times;</span>
 
 <h2>Blinkit Sales Analysis</h2>
@@ -370,14 +390,11 @@ understand trends, customer behavior, and operational performance.
 
 <p>
 
-This project analyzes retail sales performance for Blinkit using Power BI dashboards.
-The dashboard explores outlet sales, item categories, and outlet performance metrics.
+This project analyzes retail sales performance for Blinkit using Power BI dashboards. The dashboard explores outlet sales, item categories, and outlet performance metrics.
 
-Through visual analysis of key KPIs such as total sales, item counts, and ratings,
-the dashboard reveals patterns in product demand and outlet distribution.
+Through visual analysis of key KPIs such as total sales, item counts, and ratings, the dashboard reveals patterns in product demand and outlet distribution.
 
-The analysis highlights high performing outlets and identifies which product
-categories generate the highest revenue.
+The analysis highlights high performing outlets and identifies which product categories generate the highest revenue.
 
 </p>
 
@@ -388,7 +405,6 @@ categories generate the highest revenue.
 
 <div id="mobilePopup" class="popup-case">
 <div class="popup-content">
-
 <span class="close" onclick="closePopup()">&times;</span>
 
 <h2>Mobile Verse Analytics</h2>
@@ -397,11 +413,11 @@ categories generate the highest revenue.
 
 <p>
 
-This project analyzes mobile phone sales data to understand brand performance
-and customer purchasing behavior.
+The Mobile Verse Analytics project analyzes smartphone sales performance and customer purchasing behavior using interactive dashboards. The analysis focuses on identifying the top-performing mobile brands, understanding customer ratings, and evaluating payment preferences used during purchases.
 
-Interactive charts explore sales trends, brand comparisons,
-and payment methods used by customers.
+The dataset includes information about mobile models, brands, sales transactions, and customer ratings. Using Power BI, the data was cleaned, transformed, and visualized into meaningful dashboards that allow users to explore brand performance in detail.
+
+Key visualizations include brand-wise sales comparison, payment method distribution, and customer rating analysis. These insights help businesses understand which mobile brands are generating the highest sales and how customers interact with different products in the market.
 
 </p>
 
@@ -412,18 +428,19 @@ and payment methods used by customers.
 
 <div id="insurancePopup" class="popup-case">
 <div class="popup-content">
-
 <span class="close" onclick="closePopup()">&times;</span>
 
-<h2>Insurance Policy Sales & Claims Analysis</h2>
+<h2>Insurance Sales & Claims Analysis</h2>
 
 <img src="chart1_monthly_claim_cost_trend.png">
 
 <p>
 
-This project analyzes insurance policies and claim cost trends using SQL and Python.
-SQL queries calculate premium revenue and liabilities,
-while Python visualizations reveal patterns in claim costs.
+This project analyzes insurance policy sales and claim trends using SQL and Python. The dataset contains information about policy premiums, claim costs, policy categories, and claim frequency across different time periods.
+
+SQL was used to extract and aggregate data to calculate important metrics such as total premium revenue, total claim cost, and claim ratios. Python libraries such as Pandas and Matplotlib were used to analyze trends and create visualizations that highlight claim cost patterns.
+
+The analysis focuses on understanding how claims impact insurance profitability and identifying periods where claim costs increase significantly. By comparing premium revenue against claim liabilities, this project demonstrates how data analysis can help insurers better understand financial risk exposure.
 
 </p>
 
