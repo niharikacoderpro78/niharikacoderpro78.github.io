@@ -215,8 +215,6 @@ font-size:30px;
 cursor:pointer;
 }
 
-/* POPUP GIRL */
-
 .popupGirl{
 position:fixed;
 bottom:30px;
@@ -265,46 +263,6 @@ font-weight:600;
 
 </section>
 
-<section class="section" id="about">
-
-<h2>About Me</h2>
-
-<p>
-
-I am an aspiring Data Analyst passionate about transforming raw data into meaningful insights that support business decision making. My journey into data analytics began with the curiosity of understanding how businesses use data to guide strategy and optimize performance.
-
-Through practical projects and continuous learning, I have developed experience working with analytical tools such as SQL, Python, Excel, Power BI, and Tableau. These tools allow me to extract, clean, analyze, and visualize data to uncover patterns that help organizations make better decisions.
-
-My work focuses on identifying key trends within datasets and presenting them through interactive dashboards and reports. By transforming complex data into easy-to-understand visualizations, I help stakeholders quickly understand performance metrics, customer behavior, and operational insights.
-
-I particularly enjoy working with data visualization because it allows businesses to explore insights interactively. Well-designed dashboards can highlight opportunities, reveal inefficiencies, and guide decision-makers toward more informed strategies.
-
-My projects involve analyzing retail sales, mobile phone market trends, and insurance claim patterns. Each project helped strengthen my analytical thinking, problem-solving abilities, and technical skills.
-
-I believe data analysis is not only about numbers but about storytelling. Every dataset contains insights that can drive meaningful business improvements when interpreted correctly. My goal is to continue growing as a data analyst and contribute to organizations by providing actionable insights that improve efficiency, increase profitability, and support strategic decision making.
-
-</p>
-
-</section>
-
-<section class="section" id="skills">
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Python</div>
-<div class="skill">SQL</div>
-<div class="skill">Excel</div>
-<div class="skill">Power BI</div>
-<div class="skill">Tableau</div>
-<div class="skill">Data Visualization</div>
-<div class="skill">Pandas</div>
-
-</div>
-
-</section>
-
 <section class="section" id="projects">
 
 <h2>Projects</h2>
@@ -312,66 +270,35 @@ I believe data analysis is not only about numbers but about storytelling. Every 
 <div class="projects">
 
 <div class="card" onclick="openBlinkit()">
-
 <img src="BLINKIT SALES DASHBOARD 2.png">
-
 <div class="card-content">
-
 <h3>Blinkit Sales Analysis</h3>
-
 <p>Retail analytics dashboard analyzing outlet performance and product sales trends.</p>
-
 </div>
-
 </div>
-
 
 <div class="card" onclick="openMobile()">
-
 <img src="Screenshot 2026-02-28 184736.png">
-
 <div class="card-content">
-
 <h3>Mobile Verse Analytics</h3>
-
-<p>Interactive dashboard analyzing mobile brand sales, ratings, and payment methods.</p>
-
+<p>Interactive dashboard analyzing mobile brand sales and customer behavior.</p>
 </div>
-
 </div>
-
 
 <div class="card" onclick="openInsurance()">
-
 <img src="chart1_monthly_claim_cost_trend.png">
-
 <div class="card-content">
-
 <h3>Insurance Sales & Claims Analysis</h3>
-
-<p>SQL and Python analysis identifying claim trends and insurance risk exposure.</p>
-
+<p>SQL and Python analysis identifying claim cost trends and risk exposure.</p>
+</div>
 </div>
 
 </div>
-
-</div>
-
-</section>
-
-<section class="section contact" id="contact">
-
-<h2>Contact</h2>
-
-<a href="mailto:niharikarao.pro@gmail.com">niharikarao.pro@gmail.com</a>
-<a href="https://www.linkedin.com/in/niharika03">LinkedIn Profile</a>
 
 </section>
 
 <footer>
-
 © 2026 Niharika Rao | Data Analyst Portfolio
-
 </footer>
 
 <div class="popupGirl">
@@ -388,59 +315,101 @@ I believe data analysis is not only about numbers but about storytelling. Every 
 
 <img src="BLINKIT SALES DASHBOARD 2.png">
 
+<h3>Tools Used</h3>
+<p>Power BI, Excel, Data Visualization</p>
+
+<h3>Key Insights</h3>
+<ul>
+<li>Tier-3 outlets generated the highest sales volume across multiple product categories.</li>
+<li>Low-fat products showed consistent demand across different outlet types.</li>
+<li>Supermarket Type-1 outlets contributed the highest share of total revenue.</li>
+<li>Recently established outlets showed strong growth in sales performance.</li>
+</ul>
+
+<h3>Business Impact</h3>
 <p>
-
-This project analyzes retail sales performance for Blinkit using Power BI dashboards. The dashboard explores outlet sales, item categories, and outlet performance metrics.
-
-Through visual analysis of key KPIs such as total sales, item counts, and ratings, the dashboard reveals patterns in product demand and outlet distribution.
-
-The analysis highlights high performing outlets and identifies which product categories generate the highest revenue.
-
+The analysis helps retail businesses identify high-performing outlets and product categories. 
+These insights support better inventory planning, product strategy decisions, and location-based expansion strategies.
 </p>
 
 </div>
 </div>
 
-<!-- MOBILE POPUP -->
+<!-- MOBILE VERSE -->
 
 <div id="mobilePopup" class="popup-case">
 <div class="popup-content">
+
 <span class="close" onclick="closePopup()">&times;</span>
 
 <h2>Mobile Verse Analytics</h2>
 
 <img src="Screenshot 2026-02-28 184736.png">
 
+<h3>Tools Used</h3>
+<p>Power BI, SQL, Excel</p>
+
+<h3>Key Insights</h3>
+
+<ul>
+
+<li>Apple and Samsung brands generated the highest sales revenue among all smartphone brands.</li>
+
+<li>Premium smartphones showed stronger sales performance compared to mid-range models.</li>
+
+<li>Online payment methods were the most commonly used transaction type among customers.</li>
+
+<li>Customer rating trends revealed strong brand loyalty for top smartphone brands.</li>
+
+</ul>
+
+<h3>Business Impact</h3>
+
 <p>
 
-The Mobile Verse Analytics project analyzes smartphone sales performance and customer purchasing behavior using interactive dashboards. The analysis focuses on identifying the top-performing mobile brands, understanding customer ratings, and evaluating payment preferences used during purchases.
-
-The dataset includes information about mobile models, brands, sales transactions, and customer ratings. Using Power BI, the data was cleaned, transformed, and visualized into meaningful dashboards that allow users to explore brand performance in detail.
-
-Key visualizations include brand-wise sales comparison, payment method distribution, and customer rating analysis. These insights help businesses understand which mobile brands are generating the highest sales and how customers interact with different products in the market.
+This analysis helps smartphone retailers understand customer purchasing patterns and brand performance. 
+The insights can support better inventory management, targeted marketing campaigns, and strategic product positioning within competitive mobile markets.
 
 </p>
 
 </div>
 </div>
 
-<!-- INSURANCE POPUP -->
+<!-- INSURANCE -->
 
 <div id="insurancePopup" class="popup-case">
 <div class="popup-content">
+
 <span class="close" onclick="closePopup()">&times;</span>
 
 <h2>Insurance Sales & Claims Analysis</h2>
 
 <img src="chart1_monthly_claim_cost_trend.png">
 
+<h3>Tools Used</h3>
+
+<p>SQL, Python (Pandas, Matplotlib), Excel</p>
+
+<h3>Key Insights</h3>
+
+<ul>
+
+<li>Claim costs increased significantly during specific months indicating seasonal risk patterns.</li>
+
+<li>Certain policy categories generated higher claim frequencies compared to others.</li>
+
+<li>Premium revenue remained stable while claim costs fluctuated across policy periods.</li>
+
+<li>High claim ratio policies highlighted areas of potential financial risk exposure.</li>
+
+</ul>
+
+<h3>Business Impact</h3>
+
 <p>
 
-This project analyzes insurance policy sales and claim trends using SQL and Python. The dataset contains information about policy premiums, claim costs, policy categories, and claim frequency across different time periods.
-
-SQL was used to extract and aggregate data to calculate important metrics such as total premium revenue, total claim cost, and claim ratios. Python libraries such as Pandas and Matplotlib were used to analyze trends and create visualizations that highlight claim cost patterns.
-
-The analysis focuses on understanding how claims impact insurance profitability and identifying periods where claim costs increase significantly. By comparing premium revenue against claim liabilities, this project demonstrates how data analysis can help insurers better understand financial risk exposure.
+This analysis helps insurance companies evaluate financial risk exposure and improve policy pricing strategies. 
+By understanding claim cost trends and claim frequency, insurers can adjust underwriting policies and optimize risk management decisions.
 
 </p>
 
