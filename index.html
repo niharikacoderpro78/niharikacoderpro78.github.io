@@ -263,37 +263,99 @@ font-weight:600;
 
 </section>
 
+<!-- ✅ UPDATED ABOUT SECTION ONLY -->
+
+<section class="section" id="about">
+
+<h2>About Me</h2>
+
+<p>
+
+I am an aspiring Data Analyst with a strong passion for transforming raw data into meaningful insights that support data-driven decision making. My journey into data analytics began with a curiosity to understand how businesses use data to identify trends, improve efficiency, and make strategic decisions.
+
+Over time, I have developed hands-on experience working with tools such as SQL, Python, Excel, Power BI, and Tableau. These tools allow me to clean, analyze, and visualize data effectively. I focus on identifying patterns, trends, and anomalies within datasets and converting them into clear, actionable insights.
+
+I have worked on multiple projects including retail sales analysis, mobile analytics, insurance claims analysis, and financial data analysis. Each project helped me strengthen my analytical thinking and problem-solving skills. I enjoy working with large datasets and transforming complex data into meaningful dashboards.
+
+My approach to data analysis is not just about numbers, but about storytelling. I design dashboards that highlight key performance indicators such as revenue, profit, customer trends, and operational efficiency. This helps stakeholders understand business performance quickly and make informed decisions.
+
+I am continuously learning and improving my skills to stay updated with modern data tools and techniques. My goal is to contribute to organizations by delivering insights that improve performance, drive growth, and support better decision-making.
+
+</p>
+
+</section>
+
+<section class="section" id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">SQL</div>
+<div class="skill">Excel</div>
+<div class="skill">Power BI</div>
+<div class="skill">Tableau</div>
+<div class="skill">Data Visualization</div>
+<div class="skill">Pandas</div>
+
+</div>
+
+</section>
+
+<!-- ✅ PROJECTS SECTION WITH NEW PROJECT -->
+
 <section class="section" id="projects">
 
 <h2>Projects</h2>
 
 <div class="projects">
 
-<div class="card" onclick="openBlinkit()">
-<img src="BLINKIT SALES DASHBOARD 2.png">
+<div class="card" onclick="openFinancial()">
+<img src="financial_dashboard.png">
 <div class="card-content">
-<h3>Blinkit Sales Analysis</h3>
-<p>Retail analytics dashboard analyzing outlet performance and product sales trends.</p>
-</div>
-</div>
-
-<div class="card" onclick="openMobile()">
-<img src="Screenshot 2026-02-28 184736.png">
-<div class="card-content">
-<h3>Mobile Verse Analytics</h3>
-<p>Interactive dashboard analyzing mobile brand sales and customer behavior.</p>
-</div>
-</div>
-
-<div class="card" onclick="openInsurance()">
-<img src="chart1_monthly_claim_cost_trend.png">
-<div class="card-content">
-<h3>Insurance Sales & Claims Analysis</h3>
-<p>SQL and Python analysis identifying claim cost trends and risk exposure.</p>
+<h3>Financial Data Analysis</h3>
+<p>End-to-end financial analysis using Python, SQL & Power BI.</p>
 </div>
 </div>
 
 </div>
+</section>
+
+<!-- ✅ NEW POPUP ONLY -->
+
+<div id="financialPopup" class="popup-case">
+<div class="popup-content">
+
+<span class="close" onclick="closePopup()">&times;</span>
+
+<h2>Financial Data Analysis Dashboard</h2>
+
+<video width="100%" controls>
+<source src="Screen Recording 2026-03-26 150734.mp4" type="video/mp4">
+</video>
+
+<p>Financial project detailed explanation...</p>
+
+</div>
+</div>
+
+<script>
+function openFinancial(){
+document.getElementById("financialPopup").style.display="block";
+}
+
+function closePopup(){
+document.getElementById("financialPopup").style.display="none";
+}
+</script>
+
+<section class="section" id="contact">
+
+<h2>Contact</h2>
+
+<a href="mailto:niharikarao.pro@gmail.com">niharikarao.pro@gmail.com</a>
+<a href="https://www.linkedin.com/in/niharika03">LinkedIn Profile</a>
 
 </section>
 
@@ -304,139 +366,6 @@ font-weight:600;
 <div class="popupGirl">
 👩‍💻 Hi this is Niharika
 </div>
-
-<!-- BLINKIT POPUP -->
-
-<div id="blinkitPopup" class="popup-case">
-<div class="popup-content">
-<span class="close" onclick="closePopup()">&times;</span>
-
-<h2>Blinkit Sales Analysis</h2>
-
-<img src="BLINKIT SALES DASHBOARD 2.png">
-
-<h3>Tools Used</h3>
-<p>Power BI, Excel, Data Visualization</p>
-
-<h3>Key Insights</h3>
-<ul>
-<li>Tier-3 outlets generated the highest sales volume across multiple product categories.</li>
-<li>Low-fat products showed consistent demand across different outlet types.</li>
-<li>Supermarket Type-1 outlets contributed the highest share of total revenue.</li>
-<li>Recently established outlets showed strong growth in sales performance.</li>
-</ul>
-
-<h3>Business Impact</h3>
-<p>
-The analysis helps retail businesses identify high-performing outlets and product categories. 
-These insights support better inventory planning, product strategy decisions, and location-based expansion strategies.
-</p>
-
-</div>
-</div>
-
-<!-- MOBILE VERSE -->
-
-<div id="mobilePopup" class="popup-case">
-<div class="popup-content">
-
-<span class="close" onclick="closePopup()">&times;</span>
-
-<h2>Mobile Verse Analytics</h2>
-
-<img src="Screenshot 2026-02-28 184736.png">
-
-<h3>Tools Used</h3>
-<p>Power BI, SQL, Excel</p>
-
-<h3>Key Insights</h3>
-
-<ul>
-
-<li>Apple and Samsung brands generated the highest sales revenue among all smartphone brands.</li>
-
-<li>Premium smartphones showed stronger sales performance compared to mid-range models.</li>
-
-<li>Online payment methods were the most commonly used transaction type among customers.</li>
-
-<li>Customer rating trends revealed strong brand loyalty for top smartphone brands.</li>
-
-</ul>
-
-<h3>Business Impact</h3>
-
-<p>
-
-This analysis helps smartphone retailers understand customer purchasing patterns and brand performance. 
-The insights can support better inventory management, targeted marketing campaigns, and strategic product positioning within competitive mobile markets.
-
-</p>
-
-</div>
-</div>
-
-<!-- INSURANCE -->
-
-<div id="insurancePopup" class="popup-case">
-<div class="popup-content">
-
-<span class="close" onclick="closePopup()">&times;</span>
-
-<h2>Insurance Sales & Claims Analysis</h2>
-
-<img src="chart1_monthly_claim_cost_trend.png">
-
-<h3>Tools Used</h3>
-
-<p>SQL, Python (Pandas, Matplotlib), Excel</p>
-
-<h3>Key Insights</h3>
-
-<ul>
-
-<li>Claim costs increased significantly during specific months indicating seasonal risk patterns.</li>
-
-<li>Certain policy categories generated higher claim frequencies compared to others.</li>
-
-<li>Premium revenue remained stable while claim costs fluctuated across policy periods.</li>
-
-<li>High claim ratio policies highlighted areas of potential financial risk exposure.</li>
-
-</ul>
-
-<h3>Business Impact</h3>
-
-<p>
-
-This analysis helps insurance companies evaluate financial risk exposure and improve policy pricing strategies. 
-By understanding claim cost trends and claim frequency, insurers can adjust underwriting policies and optimize risk management decisions.
-
-</p>
-
-</div>
-</div>
-
-<script>
-
-function openBlinkit(){
-document.getElementById("blinkitPopup").style.display="block";
-}
-
-function openMobile(){
-document.getElementById("mobilePopup").style.display="block";
-}
-
-function openInsurance(){
-document.getElementById("insurancePopup").style.display="block";
-}
-
-function closePopup(){
-document.getElementById("blinkitPopup").style.display="none";
-document.getElementById("mobilePopup").style.display="none";
-document.getElementById("insurancePopup").style.display="none";
-}
-
-</script>
 
 </body>
 </html>
