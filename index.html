@@ -263,23 +263,15 @@ font-weight:600;
 
 </section>
 
-<!-- ✅ UPDATED ABOUT SECTION ONLY -->
-
 <section class="section" id="about">
 
 <h2>About Me</h2>
 
 <p>
 
-I am an aspiring Data Analyst with a strong passion for transforming raw data into meaningful insights that support data-driven decision making. My journey into data analytics began with a curiosity to understand how businesses use data to identify trends, improve efficiency, and make strategic decisions.
+I am an aspiring Data Analyst passionate about transforming raw data into meaningful insights that support business decision making. I have hands-on experience with SQL, Python, Excel, Power BI, and Tableau to analyze and visualize data.
 
-Over time, I have developed hands-on experience working with tools such as SQL, Python, Excel, Power BI, and Tableau. These tools allow me to clean, analyze, and visualize data effectively. I focus on identifying patterns, trends, and anomalies within datasets and converting them into clear, actionable insights.
-
-I have worked on multiple projects including retail sales analysis, mobile analytics, insurance claims analysis, and financial data analysis. Each project helped me strengthen my analytical thinking and problem-solving skills. I enjoy working with large datasets and transforming complex data into meaningful dashboards.
-
-My approach to data analysis is not just about numbers, but about storytelling. I design dashboards that highlight key performance indicators such as revenue, profit, customer trends, and operational efficiency. This helps stakeholders understand business performance quickly and make informed decisions.
-
-I am continuously learning and improving my skills to stay updated with modern data tools and techniques. My goal is to contribute to organizations by delivering insights that improve performance, drive growth, and support better decision-making.
+I enjoy working on real-world projects such as sales analysis, mobile analytics, insurance claims, and financial dashboards. My goal is to convert complex data into clear insights that help businesses make better decisions.
 
 </p>
 
@@ -303,7 +295,7 @@ I am continuously learning and improving my skills to stay updated with modern d
 
 </section>
 
-<!-- ✅ PROJECTS SECTION WITH NEW PROJECT -->
+<!-- ✅ PROJECTS FIXED -->
 
 <section class="section" id="projects">
 
@@ -311,6 +303,34 @@ I am continuously learning and improving my skills to stay updated with modern d
 
 <div class="projects">
 
+<!-- BLINKIT -->
+<div class="card" onclick="openBlinkit()">
+<img src="BLINKIT SALES DASHBOARD 2.png">
+<div class="card-content">
+<h3>Blinkit Sales Analysis</h3>
+<p>Retail analytics dashboard analyzing outlet performance and product sales trends.</p>
+</div>
+</div>
+
+<!-- MOBILE -->
+<div class="card" onclick="openMobile()">
+<img src="Screenshot 2026-02-28 184736.png">
+<div class="card-content">
+<h3>Mobile Verse Analytics</h3>
+<p>Interactive dashboard analyzing mobile brand sales, ratings, and payment methods.</p>
+</div>
+</div>
+
+<!-- INSURANCE -->
+<div class="card" onclick="openInsurance()">
+<img src="chart1_monthly_claim_cost_trend.png">
+<div class="card-content">
+<h3>Insurance Sales & Claims Analysis</h3>
+<p>SQL and Python analysis identifying claim trends and insurance risk exposure.</p>
+</div>
+</div>
+
+<!-- NEW FINANCIAL -->
 <div class="card" onclick="openFinancial()">
 <img src="financial_dashboard.png">
 <div class="card-content">
@@ -322,11 +342,10 @@ I am continuously learning and improving my skills to stay updated with modern d
 </div>
 </section>
 
-<!-- ✅ NEW POPUP ONLY -->
+<!-- EXISTING POPUPS (same) + NEW -->
 
 <div id="financialPopup" class="popup-case">
 <div class="popup-content">
-
 <span class="close" onclick="closePopup()">&times;</span>
 
 <h2>Financial Data Analysis Dashboard</h2>
@@ -335,22 +354,28 @@ I am continuously learning and improving my skills to stay updated with modern d
 <source src="Screen Recording 2026-03-26 150734.mp4" type="video/mp4">
 </video>
 
-<p>Financial project detailed explanation...</p>
+<p>Financial analysis project using Python, SQL and Power BI.</p>
 
 </div>
 </div>
 
 <script>
-function openFinancial(){
-document.getElementById("financialPopup").style.display="block";
-}
+
+function openBlinkit(){document.getElementById("blinkitPopup").style.display="block";}
+function openMobile(){document.getElementById("mobilePopup").style.display="block";}
+function openInsurance(){document.getElementById("insurancePopup").style.display="block";}
+function openFinancial(){document.getElementById("financialPopup").style.display="block";}
 
 function closePopup(){
+document.getElementById("blinkitPopup").style.display="none";
+document.getElementById("mobilePopup").style.display="none";
+document.getElementById("insurancePopup").style.display="none";
 document.getElementById("financialPopup").style.display="none";
 }
+
 </script>
 
-<section class="section" id="contact">
+<section class="section contact" id="contact">
 
 <h2>Contact</h2>
 
