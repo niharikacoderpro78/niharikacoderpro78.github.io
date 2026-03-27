@@ -446,7 +446,80 @@ The analysis focuses on understanding how claims impact insurance profitability 
 
 </div>
 </div>
+<!-- ⭐ NEW FINANCIAL PROJECT (ONLY ADDITION) -->
+<div class="card" onclick="openFinancial()">
+<img src="financial_dashboard.png">
+<div class="card-content">
+<h3>Financial Data Analysis</h3>
+<p>End-to-end financial analysis using Python, SQL & Power BI dashboard.</p>
+</div>
+</div>
 
+</div>
+</section>
+
+<!-- ⭐ NEW FINANCIAL POPUP -->
+<div id="financialPopup" class="popup-case">
+<div class="popup-content">
+<span class="close" onclick="closePopup()">&times;</span>
+
+<h2>Financial Data Analysis Dashboard</h2>
+
+<video width="100%" controls>
+<source src="Screen Recording 2026-03-26 150734.mp4" type="video/mp4">
+</video>
+
+<p>
+
+This project focuses on performing a complete end-to-end financial data analysis to evaluate business performance across multiple dimensions including regions, departments, and time. The primary goal of this project was to simulate a real-world business environment by generating a large-scale dataset and extracting meaningful insights from it.
+
+The dataset was created using Python, where over 100,000 records were generated to mimic realistic financial transactions. Key variables such as revenue, expenses, and profit were included, along with categorical features like region and department. This helped in building a structured dataset suitable for advanced analysis.
+
+After generating the dataset, it was stored and managed in PostgreSQL. SQL was used extensively to query, clean, and transform the data. Aggregations were performed to calculate important metrics such as total revenue, total expenses, and total profit. Grouping operations helped analyze performance across different regions and departments.
+
+The analysis aimed to answer important business questions such as which regions generate the highest profit, which departments are most efficient, and how financial performance changes over time. Monthly trend analysis was also conducted to identify patterns and fluctuations in profit.
+
+Power BI was then used to build an interactive dashboard that presents all key insights visually. The dashboard includes KPI cards displaying total revenue, total expenses, total profit, and profit margin percentage. Bar charts were used to compare profit across regions and departments, while line charts were used to track monthly trends.
+
+Interactive slicers were added for region, department, and month, allowing users to dynamically filter and explore the data. This enhances user experience and enables deeper analysis without needing to modify the dataset.
+
+Key insights from the dashboard indicate that certain regions consistently outperform others in terms of profitability. Department-level analysis shows relatively balanced performance, while monthly trends reveal fluctuations that may suggest seasonal business patterns.
+
+This project demonstrates a complete data analytics workflow, starting from data generation in Python, data management using SQL, and visualization using Power BI. It highlights the ability to transform raw data into meaningful business insights and present them effectively through dashboards.
+
+</p>
+
+</div>
+</div>
+
+<!-- ================= SCRIPT ================= -->
+
+<script>
+
+function openBlinkit(){
+document.getElementById("blinkitPopup").style.display="block";
+}
+
+function openMobile(){
+document.getElementById("mobilePopup").style.display="block";
+}
+
+function openInsurance(){
+document.getElementById("insurancePopup").style.display="block";
+}
+
+/* ⭐ ONLY NEW FUNCTION ADDED */
+function openFinancial(){
+document.getElementById("financialPopup").style.display="block";
+}
+
+function closePopup(){
+document.getElementById("blinkitPopup").style.display="none";
+document.getElementById("mobilePopup").style.display="none";
+document.getElementById("insurancePopup").style.display="none";
+document.getElementById("financialPopup").style.display="none";
+}
+  
 <script>
 
 function openBlinkit(){
