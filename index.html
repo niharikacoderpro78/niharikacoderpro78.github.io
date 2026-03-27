@@ -4,46 +4,103 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Niharika Portfolio</title>
+<title>Niharika | Data Analyst</title>
 
 <style>
 
+/* ===== BACKGROUND ===== */
 body{
     margin:0;
-    font-family: Arial;
-    background:#0b0b0b;
+    font-family: 'Segoe UI', sans-serif;
     color:white;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    overflow-x:hidden;
 }
 
-/* NAV */
-nav{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 50px;
-    background:black;
+/* FLOATING NUMBERS */
+.background span{
+    position:absolute;
+    color:rgba(255,255,255,0.05);
+    font-size:20px;
+    animation: float 20s linear infinite;
 }
 
-nav h2{
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-10vh);}
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:50px;
+    margin:0;
+}
+
+.hero h3{
+    color:#00e0ff;
+    letter-spacing:2px;
+}
+
+/* BUTTONS */
+.buttons{
+    margin-top:20px;
+}
+
+.buttons a{
+    padding:12px 20px;
+    margin:10px;
+    display:inline-block;
+    border-radius:30px;
+    text-decoration:none;
     color:white;
+    background:#00bcd4;
+    transition:0.3s;
 }
 
-/* SECTION */
+.buttons a:hover{
+    background:#0097a7;
+}
+
+/* GIRL AVATAR */
+.avatar{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    text-align:center;
+}
+
+.avatar img{
+    width:120px;
+}
+
+.avatar p{
+    background:white;
+    color:black;
+    padding:5px 10px;
+    border-radius:10px;
+}
+
+/* PROJECTS */
 .section{
     padding:50px;
 }
 
-/* PROJECT GRID */
 .projects{
     display:flex;
-    gap:30px;
+    gap:25px;
     flex-wrap:wrap;
+    justify-content:center;
 }
 
-/* CARD */
 .card{
-    width:300px;
-    background:#1a1a1a;
-    border-radius:10px;
+    width:280px;
+    background:#1c1c1c;
+    border-radius:12px;
     overflow:hidden;
     cursor:pointer;
     transition:0.3s;
@@ -64,26 +121,25 @@ nav h2{
 }
 
 /* POPUP */
-.popup-case{
+.popup{
     display:none;
     position:fixed;
     top:0;
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.8);
-    z-index:1000;
+    background:rgba(0,0,0,0.9);
 }
 
 .popup-content{
     background:white;
     color:black;
     width:80%;
-    max-height:90%;
-    overflow:auto;
     margin:40px auto;
     padding:20px;
     border-radius:10px;
+    max-height:90%;
+    overflow:auto;
 }
 
 .close{
@@ -92,108 +148,104 @@ nav h2{
     cursor:pointer;
 }
 
-video{
-    border-radius:10px;
-    margin-bottom:20px;
-}
-
 </style>
 </head>
 
 <body>
 
-<nav>
-    <h2>Hi Niharika 👋</h2>
-</nav>
+<!-- FLOATING NUMBERS -->
+<div class="background">
+<span style="left:10%">101</span>
+<span style="left:30%">202</span>
+<span style="left:50%">303</span>
+<span style="left:70%">404</span>
+<span style="left:90%">505</span>
+</div>
 
+<!-- HERO -->
+<div class="hero">
+<h1>Niharika</h1>
+<h3>DATA ANALYST</h3>
+
+<div class="buttons">
+<a href="resume.pdf" download>Download Resume</a>
+<a href="https://linkedin.com/in/niharika03" target="_blank">LinkedIn</a>
+<a href="mailto:niharikarao.pro@gmail.com">Email</a>
+</div>
+</div>
+
+<!-- AVATAR -->
+<div class="avatar">
+<img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png">
+<p>Hi, this is Niharika 👋</p>
+</div>
+
+<!-- PROJECTS -->
 <section class="section">
 <h2>Projects</h2>
 
 <div class="projects">
 
-<!-- BLINKIT -->
 <div class="card" onclick="openPopup('blinkit')">
 <img src="BLINKIT SALES DASHBOARD 2.png">
 <div class="card-content">
-<h3>Blinkit Sales Analysis</h3>
-<p>Retail analytics dashboard analyzing outlet performance.</p>
+<h3>Blinkit Analysis</h3>
 </div>
 </div>
 
-<!-- MOBILE -->
 <div class="card" onclick="openPopup('mobile')">
 <img src="Screenshot 2026-02-28 184736.png">
 <div class="card-content">
-<h3>Mobile Verse Analytics</h3>
-<p>Mobile sales and customer trends analysis.</p>
+<h3>Mobile Verse</h3>
 </div>
 </div>
 
-<!-- INSURANCE -->
 <div class="card" onclick="openPopup('insurance')">
 <img src="chart1_monthly_claim_cost_trend.png">
 <div class="card-content">
 <h3>Insurance Analysis</h3>
-<p>Claims and risk analytics using SQL.</p>
 </div>
 </div>
 
-<!-- ⭐ NEW FINANCIAL -->
 <div class="card" onclick="openPopup('financial')">
 <img src="financial_dashboard.png">
 <div class="card-content">
-<h3>Financial Data Analysis</h3>
-<p>Python + SQL + Power BI financial insights.</p>
+<h3>Financial Analysis</h3>
 </div>
 </div>
 
 </div>
 </section>
 
-<!-- POPUPS -->
-
-<div id="blinkit" class="popup-case">
+<!-- FINANCIAL POPUP -->
+<div id="financial" class="popup">
 <div class="popup-content">
-<span class="close" onclick="closePopup('blinkit')">&times;</span>
-<h2>Blinkit Dashboard</h2>
-<img src="BLINKIT SALES DASHBOARD 2.png" width="100%">
-<p>Blinkit sales dashboard description...</p>
-</div>
-</div>
-
-<div id="mobile" class="popup-case">
-<div class="popup-content">
-<span class="close" onclick="closePopup('mobile')">&times;</span>
-<h2>Mobile Dashboard</h2>
-<img src="Screenshot 2026-02-28 184736.png" width="100%">
-<p>Mobile analysis description...</p>
-</div>
-</div>
-
-<div id="insurance" class="popup-case">
-<div class="popup-content">
-<span class="close" onclick="closePopup('insurance')">&times;</span>
-<h2>Insurance Dashboard</h2>
-<img src="chart1_monthly_claim_cost_trend.png" width="100%">
-<p>Insurance project description...</p>
-</div>
-</div>
-
-<!-- ⭐ FINANCIAL POPUP WITH VIDEO -->
-<div id="financial" class="popup-case">
-<div class="popup-content">
-
 <span class="close" onclick="closePopup('financial')">&times;</span>
 
 <h2>Financial Dashboard</h2>
 
 <video width="100%" controls>
-<source src="Screen Recording 2026-03-26 150734.mp4" type="video/mp4">
+<source src="Screen Recording 2026-03-26 150734.mp4">
 </video>
 
 <p>
-This project focuses on performing a complete end-to-end financial data analysis...
-(Paste your full 500 word description here)
+This project focuses on performing a complete end-to-end financial data analysis to evaluate business performance across multiple dimensions including regions, departments, and time. The goal was to simulate a real-world business scenario using a large dataset.
+
+A dataset of over 100,000 records was generated using Python, ensuring realistic representation of financial transactions. It included attributes such as revenue, expenses, profit, regions, and departments. This dataset allowed deep analysis across multiple business dimensions.
+
+The data was then imported into PostgreSQL where SQL queries were used to clean, structure, and analyze the data. Aggregations helped derive key KPIs such as total revenue, total expenses, and total profit. Grouping functions enabled performance comparisons across regions and departments.
+
+The analysis revealed which regions contributed most to profitability and which departments operated efficiently. Monthly trend analysis was conducted to identify patterns and fluctuations, helping understand seasonal impacts.
+
+Power BI was used to build an interactive dashboard presenting insights visually. KPI cards displayed revenue, profit, expenses, and margin. Bar charts compared regions and departments, while line charts tracked monthly trends.
+
+Interactive slicers allowed filtering by region, department, and time, enabling dynamic analysis. This improved user experience and made insights more accessible.
+
+Key findings showed consistent high performance from certain regions, while others had fluctuating trends. Departments showed relatively stable performance, indicating balanced operations.
+
+This project demonstrates strong skills in Python for data generation, SQL for data manipulation, and Power BI for visualization. It highlights the ability to convert raw data into meaningful insights that support business decision-making.
+
+Overall, this project reflects a complete data analytics workflow and showcases analytical thinking, technical skills, and visualization expertise.
 </p>
 
 </div>
@@ -202,11 +254,11 @@ This project focuses on performing a complete end-to-end financial data analysis
 <script>
 
 function openPopup(id){
-    document.getElementById(id).style.display="block";
+document.getElementById(id).style.display="block";
 }
 
 function closePopup(id){
-    document.getElementById(id).style.display="none";
+document.getElementById(id).style.display="none";
 }
 
 </script>
